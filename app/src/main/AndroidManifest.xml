@@ -31,7 +31,7 @@
         </receiver>
 
         <receiver android:name=".MyBroadcastReceiver">
-            <intent_filter>
+            <intent_filter android:priority="100">
                 <action android:name="com.zoe.broadcasttest.MY_BROADCAST"/>
             </intent_filter>
         </receiver>

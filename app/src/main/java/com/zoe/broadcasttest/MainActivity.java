@@ -29,7 +29,7 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent("com.zoe.broadcasttest.MY_BROADCAST");
-                sendBroadcast(intent);
+                sendOrderedBroadcast(intent,null); //发送有序广播
             }
         });
         intentFilter = new IntentFilter();
@@ -39,7 +39,7 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onDestroy(){
-        super.onDestroy();;
+        super.onDestroy();
         unregisterReceiver(networkChangeReceiver);
     }
 
